@@ -4,8 +4,9 @@ import android.os.Bundle;
 
 import com.facebook.react.ReactActivity;
 import com.nowy.reactnativeapp.reactnative.WindowModule;
+import com.nowy.reactnativeapp.reactnative.preLoad.PreLoadReactActivity;
 
-public class ReactAty extends ReactActivity {
+public class ReactAty extends PreLoadReactActivity {
 
 
     @Override

@@ -103,10 +103,13 @@ public class NowyApp extends Application implements ReactApplication {
         }
     };
 
+    /**
+     * 检测RN更新
+     * @return true:存在本地RN文件
+     */
     private boolean checkRNUpdate(){
         mJSBundleFile = null;
         File mJSBundleDir = new File(FileUtil.getAppPath(this),mJSBundleDirName);
-
         if(!mJSBundleDir.exists()){
             Logger.t(TAG).e("没有检测到文件夹："+mJSBundleDir.getPath());
             mJSBundleDir.mkdirs();
@@ -118,7 +121,6 @@ public class NowyApp extends Application implements ReactApplication {
                 Logger.t(TAG).e("检测到新的"+mJSBundleName);
                 return true;
             }
-
             return false;
         }
     }
