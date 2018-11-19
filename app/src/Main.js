@@ -25,8 +25,6 @@ class Main extends React.Component{
     
     componentWillMount() {
         DeviceEventEmitter.addListener('windowInfoEvent', (data) => {
-           
-           
             const {windowInfoHeight,windowInfoWidth} = data;
             if(windowInfoHeight != null){
                 this.setState({
@@ -36,7 +34,6 @@ class Main extends React.Component{
                     }
                 });
             }
-           
         });
       }
 
@@ -45,7 +42,7 @@ class Main extends React.Component{
         return(
             <View style={styles.container}>
                 <Text style={styles.title}>ReactNative页面</Text>
-
+                <Text style={styles.version}>热更新测试</Text>
                 <View style={styles.content}>
                     <TouchableOpacity
 
@@ -108,6 +105,11 @@ const styles = StyleSheet.create({
     title:{
         fontSize:18,
         color:'#111'
+    },
+    version:{
+        fontSize:16,
+        color:'#333',
+        marginTop: 10
     },
     content: {
         flex: 1,
