@@ -49,9 +49,6 @@ public class NowyApp extends Application implements ReactApplication {
                     new CusReactNativePackage()
             );
         }
-
-
-
         //对应react-native项目的入口文件的名称，此项目为index.js
         @Override
         protected String getJSMainModuleName() {
