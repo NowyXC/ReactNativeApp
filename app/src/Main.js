@@ -7,6 +7,7 @@ import {
   
 import Test from './Test';
 import CallNativeToast from './CallNativeToast';
+import ImagePage from './ImagePage'
 
 import CallNativeAndCallback from './CallNativeAndCallback';
 
@@ -65,6 +66,17 @@ class Main extends React.Component{
                         <Text style={styles.button}>调用原生方法,并回调</Text>
                     </TouchableOpacity>
                    
+                    <TouchableOpacity
+                        onPress={
+                            ()=>{
+                                navigate('ImagePage');
+                            }
+                        }
+                        >
+                        <Text style={styles.button}>热更新带图片资源</Text>
+                    </TouchableOpacity>
+
+
                 </View>
                 <View style={styles.windowInfo}>
                     <Text style={styles.bottomTitle}>native向react-native传递信息</Text>
@@ -85,6 +97,7 @@ class Main extends React.Component{
 const App = createStackNavigator({
     Main:{screen:Main},
     Test: { screen: Test },
+    ImagePage:{screen:ImagePage},
     CallNativeToast: { screen: CallNativeToast },
     CallNativeAndCallback:{screen:CallNativeAndCallback}
   },{

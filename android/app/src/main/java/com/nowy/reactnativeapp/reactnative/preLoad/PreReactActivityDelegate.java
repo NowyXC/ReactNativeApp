@@ -25,7 +25,6 @@ public class PreReactActivityDelegate extends ReactActivityDelegate {
     private final @Nullable String mMainComponentName;
 
     private @Nullable ReactRootView mReactRootView;
-    private @Nullable DoubleTapReloadRecognizer mDoubleTapReloadRecognizer;
 
 
     public PreReactActivityDelegate(Activity activity, @Nullable String mainComponentName) {
